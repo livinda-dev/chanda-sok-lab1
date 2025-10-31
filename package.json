@@ -1,0 +1,30 @@
+{
+  "name": "chanda-sok-lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha",
+    "lint": "eslint . --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livinda-dev/chanda-sok-lab1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livinda-dev/chanda-sok-lab1/issues"
+  },
+  "homepage": "https://github.com/livinda-dev/chanda-sok-lab1#readme",
+  "dependencies": {
+    "chai": "^6.2.0",
+    "eslint": "^9.38.0",
+    "express": "^5.1.0",
+    "mocha": "^11.7.4",
+    "supertest": "^7.1.4"
+  }
+}
