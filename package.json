@@ -8,11 +8,24 @@
     "start": "node server.js",
     "test": "mocha",
     "lint": "eslint . --ext .js",
-    "coverage": "nyc --reporter=lcov --reporter=text --include=src/**/*.js mocha"
+    "coverage": "nyc --require @babel/register mocha"
+
 
 
 
   },
+  "nyc": {
+  "all": true,
+  "reporter": ["lcov", "text"],
+  "exclude": [
+    "server.js",
+    "eslint.config.js",
+    "coverage/**",
+    "chanda-sok-lab1/coverage/**"
+  ]
+},
+
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/livinda-dev/chanda-sok-lab1.git"
@@ -31,6 +44,10 @@
     "supertest": "^7.1.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/register": "^7.28.3",
+    "esm": "^3.2.25",
     "mocha": "^11.7.4",
     "nyc": "^17.1.0"
   }
