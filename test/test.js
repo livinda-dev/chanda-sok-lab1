@@ -50,7 +50,7 @@ describe('POST /sum', () => {
 
 describe('greet helper', () => {
   it('should return correct greeting', () => {
-    expect(greet()).to.equal('Hello CI/CD!');
+    expect(greet()).to.equal('Hello CI/C!');
     expect(greet('Chanda')).to.equal('Hello Chanda!');
   });
 });
