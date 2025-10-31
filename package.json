@@ -8,7 +8,8 @@
     "start": "node server.js",
     "test": "mocha",
     "lint": "eslint . --ext .js",
-    "coverage": "nyc --reporter=lcov --reporter=text --include=app.js --include=server.js mocha"
+    "coverage": "nyc --reporter=lcov --reporter=text --include=src/**/*.js mocha"
+
 
 
   },
