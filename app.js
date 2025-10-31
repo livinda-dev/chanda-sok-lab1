@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 // Helper function
-function greet(name = "CI/CD") {
+function greet(name = "CI/C") {
   return `Hello ${name}!`;
 }
 
