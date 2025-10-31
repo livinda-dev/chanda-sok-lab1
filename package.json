@@ -8,7 +8,9 @@
     "start": "node server.js",
     "test": "mocha",
     "lint": "eslint . --ext .js",
-    "coverage": "nyc --reporter=lcov --reporter=text mocha"
+    "coverage": "nyc --reporter=lcov --reporter=text --include=app.js --include=server.js mocha"
+
+
   },
   "repository": {
     "type": "git",
