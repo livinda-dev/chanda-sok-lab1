@@ -1,4 +1,4 @@
-name: Node.js CI (Render)
+name: Node.js CI & Deploy (Render)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main, development ]
 
 jobs:
-  build-test:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -41,9 +41,9 @@ jobs:
         with:
           name: coverage-report-${{ matrix.node-version }}
           path: coverage/
-          
+
+      # DEPLOY to Render ONLY if tests passed + branch is main
       - name: Trigger Render Deploy
         if: success() && github.ref == 'refs/heads/main'
         run: |
-          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
